@@ -1,0 +1,29 @@
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.codjo.maven.mojo</groupId>
+                <artifactId>maven-delivery-plugin</artifactId>
+                <configuration>
+                    <!-- Mock -->
+                    <project implementation="net.codjo.maven.common.mock.MavenProjectMock"/>
+                    <localRepository implementation="net.codjo.maven.common.mock.ArtifactRepositoryMock"/>
+                    <finalName>web</finalName>
+
+                    <!-- Configuration normal -->
+                    <descriptorId>web</descriptorId>
+                    <includes>
+                        <include>
+                            <groupId>net.codjo.agent</groupId>
+                            <artifactId>codjo-agent-bootstrap</artifactId>
+                            <classifier>import</classifier>
+                            <type>ksh</type>
+
+                            <output>import.ksh</output>
+                        </include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

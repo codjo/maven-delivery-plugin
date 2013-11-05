@@ -1,0 +1,13 @@
+<!--
+  Pour le DEV seulement.
+-->
+<model>
+    <grants>
+        <entry>
+            <user name="${artifactId}"/>
+            <list>
+                <role name="Utilisateur"/>
+            </list>
+        </entry>
+    </grants>
+</model>

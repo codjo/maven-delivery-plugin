@@ -1,0 +1,41 @@
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.codjo.maven.mojo</groupId>
+                <artifactId>maven-delivery-plugin</artifactId>
+                <configuration>
+                    <!-- Mock -->
+                    <project implementation="net.codjo.maven.common.mock.MavenProjectMock"/>
+                    <localRepository implementation="net.codjo.maven.common.mock.ArtifactRepositoryMock"/>
+                    <finalName>batch</finalName>
+
+                    <!-- Configuration normal -->
+                    <descriptorId>batch</descriptorId>
+                    <includes>
+                        <include>
+                            <groupId>net.codjo.agent</groupId>
+                            <artifactId>codjo-agent-bootstrap</artifactId>
+                            <classifier>import</classifier>
+                            <type>ksh</type>
+
+                            <output>import.ksh</output>
+                        </include>
+                        <include>
+                            <groupId>net.codjo.agent</groupId>
+                            <artifactId>codjo-agent-bootstrap</artifactId>
+                            <classifier>export</classifier>
+                            <type>ksh</type>
+
+                            <output>export.ksh</output>
+                            <properties>
+                                <preScript>echo batch d'import</preScript>
+                                <jvmArguments>-client</jvmArguments>
+                            </properties>
+                        </include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

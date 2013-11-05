@@ -1,0 +1,18 @@
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.codjo.maven.mojo</groupId>
+                <artifactId>maven-delivery-plugin</artifactId>
+                <configuration>
+                    <!-- Mock -->
+                    <project implementation="net.codjo.maven.common.mock.MavenProjectMock"/>
+                    <localRepository implementation="net.codjo.maven.common.mock.ArtifactRepositoryMock"/>
+                    <finalName>sql</finalName>
+                    <!-- Configuration normal -->
+                    <descriptorId>sql</descriptorId>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

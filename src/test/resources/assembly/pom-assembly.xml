@@ -1,0 +1,16 @@
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.codjo.maven.mojo</groupId>
+                <artifactId>maven-delivery-plugin</artifactId>
+                <configuration>
+                    <project implementation="net.codjo.maven.common.mock.MavenProjectMock"/>
+                    <basedir>.</basedir>
+                    <localRepository implementation="net.codjo.maven.common.mock.ArtifactRepositoryMock"/>
+                    <descriptorId>client</descriptorId>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

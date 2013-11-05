@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+  <groupId>net.codjo.agent</groupId>
+  <artifactId>codjo-agent-bootstrap</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20061109.160922</timestamp>
+      <buildNumber>29</buildNumber>
+    </snapshot>
+    <lastUpdated>20061109160923</lastUpdated>
+  </versioning>
+</metadata>

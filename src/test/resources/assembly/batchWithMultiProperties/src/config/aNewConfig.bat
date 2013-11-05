@@ -1,0 +1,2 @@
+artifactId = ${artifactId}
+anotherParam = anotherValue

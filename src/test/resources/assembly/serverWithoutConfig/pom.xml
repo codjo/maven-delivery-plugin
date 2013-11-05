@@ -1,0 +1,37 @@
+<project>
+    <name>POM For test</name>
+
+    <artifactId>mint-server</artifactId>
+    <parent>
+        <groupId>net.codjo.mint</groupId>
+        <artifactId>mint</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.codjo.maven.mojo</groupId>
+                <artifactId>maven-delivery-plugin</artifactId>
+                <configuration>
+                    <project implementation="net.codjo.maven.common.mock.MavenProjectMock"/>
+                    <localRepository implementation="net.codjo.maven.common.mock.ArtifactRepositoryMock"/>
+
+                    <finalName>serveur</finalName>
+                    <includes>
+                        <include>
+                            <groupId>net.codjo.agent</groupId>
+                            <artifactId>codjo-agent-bootstrap</artifactId>
+                            <classifier>server</classifier>
+                            <type>sh</type>
+
+                            <output>server.sh</output>
+                        </include>
+                    </includes>
+                    <!-- Lie au packaging -->
+                    <descriptorId>server</descriptorId>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,2 @@
+./import.ksh
+./local-batch.ksh

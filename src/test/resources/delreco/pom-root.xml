@@ -1,0 +1,15 @@
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.codjo.maven.mojo</groupId>
+                <artifactId>maven-delivery-plugin</artifactId>
+                <configuration>
+                    <workingDirectory>target/checkout</workingDirectory>
+                    <assemblySearchPattern>**/*-assembly.zip</assemblySearchPattern>
+                    <delrecoOutput>target/depotDelreco</delrecoOutput>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

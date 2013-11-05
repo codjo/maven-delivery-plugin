@@ -1,0 +1,24 @@
+<assembly>
+    <id>assembly</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.basedir}/src/main/sql</directory>
+            <outputDirectory>${deliveryDirectory}</outputDirectory>
+            <excludes>
+                <exclude>procedure-order.txt</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/target/sql</directory>
+            <outputDirectory>${deliveryDirectory}</outputDirectory>
+            <excludes>
+                <exclude>*-procedure-order.txt</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+</assembly>
