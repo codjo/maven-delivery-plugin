@@ -88,9 +88,9 @@
      -->
 
     <scm>
-        <connection>scm:git:https://github.com/codjo/delivery.git</connection>
-        <developerConnection>scm:git:https://github.com/codjo/delivery.git</developerConnection>
-        <url>https://github.com/codjo/delivery</url>
+        <connection>scm:git:https://github.com/codjo/maven-delivery-plugin.git</connection>
+        <developerConnection>scm:git:https://github.com/codjo/maven-delivery-plugin.git</developerConnection>
+        <url>https://github.com/codjo/maven-delivery-plugin</url>
     </scm>
 
 </project>
